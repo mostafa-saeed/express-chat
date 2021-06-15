@@ -1,0 +1,25 @@
+version: '2.2'
+
+services:
+  node_app:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    env_file:
+      - ./.env
+    restart: always
+    command: ./node_modules/nodemon/bin/nodemon.js src/app.js
+    volumes:
+      - ./src:/opt/node_app/src
+    depends_on:
+      - mongo
+      - redis
+
+  mongo:
+    image: mongo:4
+    ports:
+      - 27017:27017
+
+  redis:
+    image: redis

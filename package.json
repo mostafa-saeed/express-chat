@@ -1,0 +1,38 @@
+{
+  "name": "express-chat",
+  "version": "1.0.0",
+  "description": "Live chat built using ExpressJS, MongoDB & SocketIO",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "lint": "eslint --fix ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/mostafa-saeed543/express-chat.git"
+  },
+  "author": "Mostafa Saeed",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/mostafa-saeed543/express-chat#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.2",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.5",
+    "redis": "^3.0.2",
+    "socket.io": "^4.0.0",
+    "socketio-jwt": "^4.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7"
+  }
+}
